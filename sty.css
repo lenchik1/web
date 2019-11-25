@@ -1,0 +1,212 @@
+body {
+	margin: 0;
+}
+header {
+ display: block;
+	width: 100%; 
+ height: 50px;
+ background: #778899;
+ 
+}
+.product-wrapper {
+	display: block;
+	width: 90%;
+	float: left;
+	//transition: width .2s;
+	//margin: auto;
+    margin: 5% 1% 5% 1%;
+
+}
+@media only screen and (min-width: 320px) {
+	.product-wrapper {
+		width: 90%;
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	.product-wrapper {
+		width: 45%;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	.product-wrapper {
+		width: 30%;
+	}
+}
+.product {
+	display: line-block;
+	border: 1px solid #b5e9a7;
+	position: relative;
+	background: #fff;
+	margin: 0 20px 20px 0;
+	text-decoration: none;
+	color: #474747;
+	z-index: 0;
+	height: 450px;
+	margin: auto;
+	vertical-align: middle;
+}
+.products {
+	list-style: none;
+	margin: 0 -20px 0 0;
+	padding: 0;
+	margin: auto;
+}
+.product-photo {
+	position: relative;
+	height: 300px;
+	overflow: hidden;
+}
+.product-photo img {
+	position: absolute;
+	top: 10px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	max-width: 100%;
+	max-height: 100%;
+	margin: auto;
+	transition: transform .4s ease-out;
+}
+.product-description {
+	margin: 0;
+	//font-size: 1em;
+	//line-height: 1.4em;
+	//height: 5.6em;
+	overflow: hidden;
+	text-align: center
+}
+.product-description .product-name {
+	margin: 0;
+	max-height: 3.8em;
+	overflow: hidden;
+	//background:gray;
+}
+.product .product-name:after {///////////
+	content: '';
+	display: inline-block;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	//width: 3.2em;
+	height: 1.6em;
+	//background:blue;
+	background: gradient(to top, #fff, rgba(255, 255, 255, 0));
+}
+
+.product-description .product-category {
+	//font-size: 1em;
+	//padding: 9px 0 0 0;
+	line-height: 1.4em;
+	//height: 2.4em;
+	//background:red;
+	overflow: hidden;
+}
+.product-description .product-price {
+	overflow: hidden;
+}
+.add {
+	position: relative;
+	display: block;
+	background: #fff;
+	margin: 0 20px 20px 0;
+	z-index: 0;
+	height: 450px;
+	width: 200px;
+}
+.add img{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	max-width: 30%;
+	//max-height: 100%;
+	margin: auto;
+	cursor: pointer;
+	
+	//vertical-align: middle;
+}
+#add:hover {
+	background: #E6E6FA;
+}
+#prompt-form {
+  display: inline-block;
+  padding: 5px 5px 5px 10px;
+  line-height: 2em;
+  width: 400px;
+  height: 300px;
+  border: 1px solid black;
+  background: white;
+  position: relative;
+}
+
+.artical{
+	border: 1px solid black;
+  //width: 100%;
+  height: 40px;
+  background: #778899;
+  position: relative;
+  text-align: center;
+  color: white;
+	line-height: 2em;
+  font-size: 1.4em;
+}
+
+#prompt-form-container {
+  position: fixed;
+  
+   
+  z-index: 9999;
+  display: none;
+ // background: white;
+
+
+  //left: 50%;
+  //top: 50%;
+	//transform: translate(-50%, -50%);
+}
+
+
+
+#cover-div {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 9000;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+}
+
+#prompt-form input[type=text] {
+  display: block;
+  margin: 5px;
+  width: 340px;
+}
+#prompt-form input[type=button], input[type=submit] {
+  display: line;
+  margin: 5px;
+  width: 100px;
+  vertical-align: middle;
+}
+.remove-button {
+  position: absolute;
+  font-size: 110%;
+  top: 0;
+  color: darkred;
+  right: 10px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.invalid { border-color: red; }
+#error { color: red;
+line-height: 1em;
+  font-size: 0.8em;}
