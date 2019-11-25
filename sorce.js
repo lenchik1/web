@@ -1,9 +1,7 @@
-	myBtn.onclick = createNewWind;
+myBtn.onclick = createNewWind;
 	function showCover() {
       let coverDiv = document.createElement('div');
       coverDiv.id = 'cover-div';
-		
-      // убираем возможность прокрутки страницы во время показа модального окна с формой
       document.body.style.overflowY = 'hidden';
 
       document.body.append(coverDiv);
@@ -18,7 +16,7 @@
 	function createNewElem(name, category, prise, img = 'no_photo.png') {
 			try {
 				if (img == '') img = 'no_photo.png';
-			document.querySelector('ul').lastElementChild.insertAdjacentHTML("beforebegin", `<li class="product-wrapper">
+				document.querySelector('ul').lastElementChild.insertAdjacentHTML("beforebegin", `<li class="product-wrapper">
 		<div class="product">
 			<div class="product-photo">
 				<img src=${img} alt="">
@@ -37,18 +35,18 @@
 			</div>
 		</div>
 	</li>`);
-	}
-		catch(err)
-		{
-			alert(err.name); // ReferenceError
-			alert(err.message); // lalala is not defined
-			alert(err.stack);
 		}
-		let bytton = document.querySelectorAll('.product-wrapper');
-		bytton[bytton.length - 2].onclick = function(event) {
-		if (event.target.className != 'remove-button') return;
-		let pane = event.target.closest('.product-wrapper');
-		pane.remove();
+			catch(err)
+			{
+				alert(err.name);
+				alert(err.message);
+				alert(err.stack);
+			}
+			let bytton = document.querySelectorAll('.product-wrapper');
+			bytton[bytton.length - 2].onclick = function(event) {
+			if (event.target.className != 'remove-button') return;
+			let pane = event.target.closest('.product-wrapper');
+			pane.remove();
 		}
 	}
 			
@@ -63,7 +61,6 @@
 		 
 
       function delet(value) {
-        console.log(';;;');
         if (value)
 			createNewElem(form.name.value, form.category.value, form.price.value, form.img.value);
 		hideCover();
@@ -73,7 +70,6 @@
 	
 		
 		form.onsubmit = function() {
-			console.log(';;;' + form.name.value + form.category.value + form.price.value);
         if (form.name.value == '' || form.category.value == '' || form.price.value == '') return false;
 			delet(true);
 			return false;
@@ -96,7 +92,7 @@
 			}
 	  };
 	  form.price.onblur = function() {
-		if (form.price.value[0] != '$') { // не email
+		if (form.price.value[0] != '$') {
 			form.price.classList.add('invalid');
 			form.price.value = '';
 			error.innerHTML = 'Цена должна начинаться с $ и содержать только цыфры.'
@@ -125,12 +121,6 @@
 		let photo = document.querySelectorAll('.product-photo');
 		for(let k = 0; k< price.length;k++)
 			localStorage[`photo${k}`] = photo[k].firstElementChild.src;
-		/*name = document.querySelectorAll('.product-price');
-		list.length = 0;
-		for(let k of name)
-			list.push(k.firstElementChild.innerHTML);
-		localStorage['price'] = list;*/
-		return false;
 	};
 	
 	function load() {

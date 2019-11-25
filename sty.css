@@ -2,18 +2,19 @@ body {
 	margin: 0;
 }
 header {
- display: block;
+	display: block;
 	width: 100%; 
- height: 50px;
- background: #778899;
- 
+	height: 50px;
+	background: #778899;
+	text-align: center;
+	color:white;
+	line-height: 1.5em;
+	font-size: 2em;
 }
 .product-wrapper {
 	display: block;
 	width: 90%;
 	float: left;
-	//transition: width .2s;
-	//margin: auto;
     margin: 5% 1% 5% 1%;
 
 }
@@ -71,9 +72,6 @@ header {
 }
 .product-description {
 	margin: 0;
-	//font-size: 1em;
-	//line-height: 1.4em;
-	//height: 5.6em;
 	overflow: hidden;
 	text-align: center
 }
@@ -81,26 +79,10 @@ header {
 	margin: 0;
 	max-height: 3.8em;
 	overflow: hidden;
-	//background:gray;
-}
-.product .product-name:after {///////////
-	content: '';
-	display: inline-block;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	//width: 3.2em;
-	height: 1.6em;
-	//background:blue;
-	background: gradient(to top, #fff, rgba(255, 255, 255, 0));
 }
 
 .product-description .product-category {
-	//font-size: 1em;
-	//padding: 9px 0 0 0;
 	line-height: 1.4em;
-	//height: 2.4em;
-	//background:red;
 	overflow: hidden;
 }
 .product-description .product-price {
@@ -109,7 +91,6 @@ header {
 .add {
 	position: relative;
 	display: block;
-	background: #fff;
 	margin: 0 20px 20px 0;
 	z-index: 0;
 	height: 450px;
@@ -122,13 +103,11 @@ header {
 	left: 0;
 	right: 0;
 	max-width: 30%;
-	//max-height: 100%;
 	margin: auto;
 	cursor: pointer;
-	
-	//vertical-align: middle;
+
 }
-#add:hover {
+#myBtn:hover {
 	background: #E6E6FA;
 }
 #prompt-form {
@@ -144,7 +123,6 @@ header {
 
 .artical{
 	border: 1px solid black;
-  //width: 100%;
   height: 40px;
   background: #778899;
   position: relative;
@@ -156,16 +134,8 @@ header {
 
 #prompt-form-container {
   position: fixed;
-  
-   
   z-index: 9999;
   display: none;
- // background: white;
-
-
-  //left: 50%;
-  //top: 50%;
-	//transform: translate(-50%, -50%);
 }
 
 
@@ -208,5 +178,6 @@ header {
 }
 .invalid { border-color: red; }
 #error { color: red;
-line-height: 1em;
-  font-size: 0.8em;}
+	line-height: 1em;
+	font-size: 0.8em;
+}
